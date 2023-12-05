@@ -1,5 +1,5 @@
 # hand-picked-oneliner
-**Hand picked oneliner**
+**Hand picked oneliners**
 
 
 # Juicy Subdomains
