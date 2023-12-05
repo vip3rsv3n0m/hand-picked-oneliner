@@ -1,9 +1,15 @@
+import '@github/clipboard-copy-element'
+<script type="module" src="./node_modules/@github/clipboard-copy-element/dist/index.js">
+
 # hand-picked-oneliner
 **Hand picked oneliner**
 
 
 # Juicy Subdomains
+<clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
 subfinder -d target.com -silent | dnsx -silent | cut -d ' ' -f1  | grep --color 'api\|dev\|stg\|test\|admin\|demo\|stage\|pre\|vpn'
+</clipboard-copy>
+<div id="blob-path">src/index.js</div>
 
 # Subdomain Takeover:
 $cat subs.txt | xargs  -P 50 -I % bash -c "dig % | grep CNAME" | awk '{print $1}' | sed 's/.$//g' | httpx -silent -status-code -cdn -csp-probe -tls-probe
